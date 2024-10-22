@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:5500/index.html?# -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de tenis</title>
+    
+    
+    <style>
+       
+        #carrinho {
+            display: none;
+            position: fixed;
+            top: 50px;
+            right: 20px;
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .carrinho-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    </style>
+<link rel="stylesheet" href="./Loja de tenis_files/estilo.css"><link rel="stylesheet" href="./Loja de tenis_files/bootstrap.css"></head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="http://127.0.0.1:5500/index.html?#">Loja</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/index.html?#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5500/index.html?#">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5500/index.html?#">Sobre</a>
+              </li>  
+            </ul>           
+          </div>
+        </div>
+    </nav>
+    <header class="container mt-5">
+        <h1 class="color">Loja de Tenis</h1>
+    </header>
+    <main class="container mt-4">        
+        <section>
+            <h2 class="color">Produtos em destaque</h2>
+            <div class="row">
+                <div class="col-sm-4">
+                  <div class="card">
+                    <img src="./Loja de tenis_files/tenis1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Nike tn</h5>
+                      <p class="card-text">Nike tn dracula R$499,99</p>
+                      <a href="http://127.0.0.1:5500/index.html?#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProduto1">Negociar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <img src="./Loja de tenis_files/tenis2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Air max TN plus</h5>
+                      <p class="card-text">Nike Air max TN plus R$250,00</p>
+                      <a href="http://127.0.0.1:5500/index.html?#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProduto2">Negociar</a>
+                    </div>
+                  </div> 
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <img src="./Loja de tenis_files/tenis3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Air max 97</h5>
+                      <p class="card-text">Nike Air max 97 triple black R$599,99</p>
+                      <a href="http://127.0.0.1:5500/index.html?#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProduto3">Negociar</a>
+                    </div>
+                  </div>
+                </div> 
+            </div>
+        </section>
+
+        <div class="modal fade" id="modalProduto1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalProduto1Label">DETALHES DA COMPRA</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               Caso dejese adicionar ao carrinho, basta apenas clicar no ícone finalizar.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" onclick="adicionarAoCarrinho(&#39;Nike tn dracula&#39;, 499.99)">Finalizar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalProduto2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalProduto2Label">DETALHES DA COMPRA</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Caso dejese adicionar ao carrinho, basta apenas clicar no ícone finalizar.              
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" onclick="adicionarAoCarrinho(&#39;Air max TN plus&#39;, 250.00)">Finalizar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalProduto3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalProduto3Label">DETALHES DA COMPRA</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Caso dejese adicionar ao carrinho, basta apenas clicar no ícone finalizar.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" onclick="adicionarAoCarrinho(&#39;&gt;Nike Air max 97 triple black&#39;, 599.99)">Finalizar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section>
+      
+        </section>
+
+       
+        <div id="carrinho">
+            <h5>Carrinho</h5>
+            <div id="carrinho-items"></div>
+            <button class="btn btn-success" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <p>© 2024 Loja de Tenis</p>
+    </footer>
+
+    <script src="./Loja de tenis_files/bootstrap.js.download"></script>
+    <script>
+        const carrinho = [];
+
+        function adicionarAoCarrinho(nome, preco) {
+            carrinho.push({ nome, preco });
+            atualizarCarrinho();
+            alert(`${nome} adicionado ao carrinho!`);
+        }
+
+        function atualizarCarrinho() {
+            const carrinhoDiv = document.getElementById('carrinho-items');
+            carrinhoDiv.innerHTML = '';
+            carrinho.forEach((item, index) => {
+                carrinhoDiv.innerHTML += `
+                    <div class="carrinho-item">
+                        <span>${item.nome} - R$${item.preco.toFixed(2)}</span>
+                        <button class="btn btn-danger btn-sm" onclick="removerDoCarrinho(${index})">Remover</button>
+                    </div>
+                `;
+            });
+            document.getElementById('carrinho').style.display = carrinho.length ? 'block' : 'none';
+        }
+
+        function removerDoCarrinho(index) {
+            carrinho.splice(index, 1);
+            atualizarCarrinho();
+        }
+
+        function finalizarCompra() {
+            alert('Compra finalizada com sucesso!');
+            carrinho.length = 0; // Limpa o carrinho
+            atualizarCarrinho();
+        }
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
